@@ -1,0 +1,660 @@
+html{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0rem;
+    padding: 0rem;
+    overflow-x: hidden;
+    color: white;
+}
+
+body{
+    margin: 0rem;
+    padding: 0rem;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav{
+    position: fixed;
+    top: 25px;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    animation: nav-fly-down 10s ease-out;
+}
+
+.negative-nav{
+    color: black;
+}
+
+.nav-item{
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    line-height: 25px;
+    padding-top: 7px;
+}
+
+.circle{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-bottom: 15px;
+    background-color: white;
+    background-clip: padding-box;
+    /*border: 8px solid transparent;*/
+    border-radius: 50%;
+    transition: 0.7s ease-in-out;
+}
+
+.negative-circle{
+    background-color: black;
+}
+
+.circle:hover{
+    cursor: pointer;
+}
+
+.active .circle{
+    transform: scale(1.8);
+    animation: active-circle-ripple 0.8s linear infinite;
+}
+
+.active .negative-circle{
+    animation: active-negative-circle-ripple 0.8s linear infinite;
+}
+
+.active .nav-page-name{
+    font-weight: 600;
+}
+
+.nav-page-name{
+    display: inline-block;
+    width: 100%;
+    font-size: 1.2rem;
+    transition: 0.7s ease-in-out;
+    text-transform: capitalize;
+}
+
+.nav-page-name:hover{
+    cursor: pointer;
+}
+
+.page{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* First Section */
+.about-me{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+}
+
+.welcome-message{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 3;
+    width: 40vw;
+    padding: 0px 150px;
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: black;
+    animation: text-fly-up 1s ease-out;
+}
+
+/* for glitch effect */
+/* 2 duplicates */
+.welcome-message::before,
+.welcome-message::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 40vw;
+    padding: 0px 150px;
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* difference */
+.welcome-message::before{
+    left: 4px;
+    text-shadow: -3px 0 rgb(151, 14, 133);
+    background: black;
+
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-animation-1 3s infinite linear alternate-reverse;
+}
+
+/* difference */
+.welcome-message::after{
+    left: -4px;
+    text-shadow: -3px 0 rgb(151, 14, 133);
+    background: black;
+
+    animation: glitch-animation-2 3s infinite linear alternate-reverse;
+}
+
+.my-description{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 3;
+    width: 40vw;
+    padding: 0px 150px;
+    font-size: 1.3rem;
+    font-style: italic;
+    animation: text-fly-up 1s ease-out;
+}
+
+/* Second Section */
+.my-skills{
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    background: white;
+}
+
+.skills-graph{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 60vh;
+    padding: 20px 0px;
+    border-left: 2px solid black;
+    border-right: 2px solid grey;
+}
+
+.skills-graph .zero{
+    position: absolute;
+    top: -25px;
+    left: -10px;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.skills-graph .hundred{
+    position: absolute;
+    top: -25px;
+    right: -20px;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.skill{
+    position: relative;
+    margin: 35px 0px;
+    height: 100px;
+    background: black;
+    text-align: center;
+    line-height: 100px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.skills-graph .html5{
+    width: 0%;
+}
+
+.animate-HTML5{
+    animation: skill-HTML5 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.skills-graph .css3{
+    width: 0%;
+}
+
+.animate-CSS3{
+    animation: skill-CSS3 1s ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.skills-graph .javascript{
+    width: 0%;
+}
+
+.animate-Javascript{
+    animation: skill-Javascript 1s ease-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.skills-graph .php{
+    width: 0%;
+}
+
+.animate-PHP{
+    animation: skill-PHP 1s ease-out;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.skill span{
+    position: absolute;
+    top: 0;
+    left: -75px;
+    width: 50px;
+    height: 100px;
+}
+
+.skill span img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+/* Third Section */
+.my-work{
+    position: absolute;
+    top: 0;
+    left: 200vw;
+    background: black;
+}
+
+.projects-wrapper{
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 0px 150px;
+    width: 100vw;
+    height: 40vh;
+    /*background: red;*/
+    box-sizing: border-box;
+    font-size: 0px;
+}
+
+.project{
+    position: relative;
+    display: inline-block;
+    width: 33.33%;
+    height: 100%;
+    /*background: blue;*/
+    font-size: 1rem;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.project img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 0%;
+    background: black;
+    opacity: 0.95;
+}
+
+.project-mask-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.mask-animation{
+    animation: project-mask-top-bottom 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.mask-leave-animation{
+    animation: project-mask-bottom-top 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.project-mask span{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Fourth Section */
+.contact-me{
+    position: absolute;
+    top: 0;
+    left: 300vw;
+    background: white;
+}
+
+.page .fa-chevron-right{
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    z-index: 9;
+    color: white;
+    font-size: 4rem;
+
+    animation-name: chevronRight;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.page .fa-chevron-left{
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    z-index: 9;
+    color: white;
+    font-size: 4rem;
+
+    animation-name: chevronLeft;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.negative-chevron{
+    color: black !important;
+}
+
+.chevron-right-wrapper{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    height: 65px;
+    width: 100px;
+}
+
+.chevron-left-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    height: 65px;
+    width: 100px;
+}
+
+
+
+/*
+*
+* Animations
+*
+*/
+
+@keyframes active-circle-ripple{
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.3),
+                    0 0 0 5px rgba(255, 255, 255, 0.3);
+   }
+    100% {
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3), 
+                    0 0 0 10px rgba(255, 255, 255, 0);
+   }
+}
+
+@keyframes active-negative-circle-ripple{
+    0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3),
+                    0 0 0 5px rgba(0, 0, 0, 0.3);
+   }
+    100% {
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3), 
+                    0 0 0 10px rgba(0, 0, 0, 0);
+   }
+}
+
+@keyframes chevronRight{
+    0% {right: 50px;}
+    50% {right: 20px;}
+    100% {right: 50px}
+}
+
+@keyframes chevronLeft{
+    0% {left: 50px;}
+    50% {left: 20px;}
+    100% {left: 50px}
+}
+
+@keyframes glitch-animation-1{
+    0% {
+        clip-path: inset(5% 0 53% 0);
+   }
+    5% {
+        clip-path: inset(87% 0 8% 0);
+   }
+    10% {
+        clip-path: inset(63% 0 10% 0);
+   }
+    15% {
+        clip-path: inset(24% 0 39% 0);
+   }
+    20% {
+        clip-path: inset(41% 0 52% 0);
+   }
+    25% {
+        clip-path: inset(2% 0 28% 0);
+   }
+    30% {
+        clip-path: inset(35% 0 54% 0);
+   }
+    35% {
+        clip-path: inset(57% 0 42% 0);
+   }
+    40% {
+        clip-path: inset(52% 0 23% 0);
+   }
+    45% {
+        clip-path: inset(17% 0 77% 0);
+   }
+    50% {
+        clip-path: inset(68% 0 13% 0);
+   }
+    55% {
+        clip-path: inset(99% 0 1% 0);
+   }
+    60% {
+        clip-path: inset(37% 0 7% 0);
+   }
+    65% {
+        clip-path: inset(39% 0 48% 0);
+   }
+    70% {
+        clip-path: inset(51% 0 22% 0);
+   }
+    75% {
+        clip-path: inset(37% 0 51% 0);
+   }
+    80% {
+        clip-path: inset(89% 0 1% 0);
+   }
+    85% {
+        clip-path: inset(4% 0 16% 0);
+   }
+    90% {
+        clip-path: inset(27% 0 28% 0);
+   }
+    95% {
+        clip-path: inset(17% 0 37% 0);
+   }
+    100% {
+        clip-path: inset(32% 0 36% 0);
+   }
+}
+
+@keyframes glitch-animation-2{
+    0% {
+        clip-path: inset(8% 0 76% 0);
+   }
+    5% {
+        clip-path: inset(75% 0 1% 0);
+   }
+    10% {
+        clip-path: inset(65% 0 13% 0);
+   }
+    15% {
+        clip-path: inset(94% 0 4% 0);
+   }
+    20% {
+        clip-path: inset(38% 0 28% 0);
+   }
+    25% {
+        clip-path: inset(64% 0 12% 0);
+   }
+    30% {
+        clip-path: inset(73% 0 22% 0);
+   }
+    35% {
+        clip-path: inset(91% 0 9% 0);
+   }
+    40% {
+        clip-path: inset(19% 0 39% 0);
+   }
+    45% {
+        clip-path: inset(75% 0 25% 0);
+   }
+    50% {
+        clip-path: inset(61% 0 38% 0);
+   }
+    55% {
+        clip-path: inset(61% 0 13% 0);
+   }
+    60% {
+        clip-path: inset(47% 0 37% 0);
+   }
+    65% {
+        clip-path: inset(49% 0 49% 0);
+   }
+    70% {
+        clip-path: inset(4% 0 36% 0);
+   }
+    75% {
+        clip-path: inset(47% 0 41% 0);
+   }
+    80% {
+        clip-path: inset(15% 0 68% 0);
+   }
+    85% {
+        clip-path: inset(79% 0 16% 0);
+   }
+    90% {
+        clip-path: inset(41% 0 55% 0);
+   }
+    95% {
+        clip-path: inset(76% 0 1% 0);
+   }
+    100% {
+        clip-path: inset(73% 0 11% 0);
+   }
+}
+
+@keyframes text-fly-up{
+    0%{
+        top: 125%;
+    }
+
+    100%{
+        top: 50%;
+    }
+}
+
+@keyframes nav-fly-down{
+    0%{
+        top: -65px;
+    }
+
+    10%{
+        top: 25px;
+    }
+}
+
+@keyframes skill-HTML5{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 85%;
+    }
+}
+
+@keyframes skill-CSS3{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 80%;
+    }
+}
+
+@keyframes skill-Javascript{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 50%;
+    }
+}
+
+@keyframes skill-PHP{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes project-mask-top-bottom{
+    0%{
+        height: 0%;
+    }
+
+    100%{
+        height: 100%;
+    }
+}
+
+@keyframes project-mask-bottom-top{
+    0%{
+        height: 100%;
+    }
+
+    100%{
+        height: 0%;
+    }
+}

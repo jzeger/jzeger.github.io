@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+
+    <!-- Quicksand Font -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <!-- Font Awesome 5.5.0 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <nav class="nav" id="navigation">
+        <div class="nav-item active" id="first">
+            <span class="circle active-circle" id="first-circle"></span>
+            <span class="nav-page-name">about me</span>
+        </div>
+        <div class="nav-item" id="second">
+            <span class="circle" id="second-circle"></span>
+            <span class="nav-page-name">my skills</span>
+        </div>
+        <div class="nav-item" id="third">
+            <span class="circle" id="third-circle"></span>
+            <span class="nav-page-name">my work</span>
+        </div>
+        <div class="nav-item" id="fourth">
+            <span class="circle" id="fourth-circle"></span>
+            <span class="nav-page-name">contact me</span>
+        </div>
+    </nav>
+    
+    <section class="page about-me">
+        <i class="fas fa-chevron-right chevron"></i>
+        <div class="chevron-right-wrapper" id="first-chevron-right"></div>
+
+        <div class="welcome-message" data-text="welcome to my portfolio!">
+            welcome to my portfolio!
+        </div>
+
+        <div class="my-description">
+            <p>Hello! My name is <b>Josip Žeger</b>. I'm <b>Computer Science</b> student and I do some <b>freelance work</b> as a <b>Web Developer</b>. </p><p>You can see <b>my skills</b> and <b>my work</b> on next pages.</p> <p>Feel free to <b>contact me</b> using provided contact form.</p> <p>See ya'!</p>
+        </div>
+    </section>
+
+    <section class="page my-skills">
+        <i class="fas fa-chevron-left chevron"></i>
+        <div class="chevron-left-wrapper" id="second-chevron-left"></div>
+        <i class="fas fa-chevron-right chevron"></i>
+        <div class="chevron-right-wrapper" id="second-chevron-right"></div>
+
+        <div class="skills-graph">
+            <span class="zero">0%</span>
+            <span class="hundred">100%</span>
+            <div class="skill html5" id="HTML5"><span><img src="assets/images/HTML5.png" alt="HTML5 logo"></span>HTML5 (85%)</div>
+            <div class="skill css3" id="CSS3"><span><img src="assets/images/CSS3.png" alt="CSS3 logo"></span>CSS3 (80%)</div>
+            <div class="skill javascript" id="Javascript"><span><img src="assets/images/Javascript.png" alt="Javascript logo"></span>Javascript (50%)</div>
+            <div class="skill php" id="PHP"><span><img src="assets/images/PHP.png" alt="PHP logo"></span>PHP (70%)</div>
+        </div>
+    </section>
+
+    <section class="page my-work">
+        <i class="fas fa-chevron-left chevron"></i>
+        <div class="chevron-left-wrapper" id="third-chevron-left"></div>
+        <i class="fas fa-chevron-right chevron"></i>
+        <div class="chevron-right-wrapper" id="third-chevron-right"></div>
+
+        <div class="projects-wrapper">
+            <div class="project linars" id="linars">
+                <img src="assets/images/linars.jpg" alt="Linars EU">
+                <div class="project-mask" id="linars-mask"></div>
+                <div class="project-mask-text">Text</div>
+            </div>
+            <div class="project utg" id="utg">
+                <img src="assets/images/utg.jpg" alt="Undher the Glove">
+                <div class="project-mask" id="utg-mask"></div>
+                <div class="project-mask-text">Text</div>
+            </div>
+            <div class="project rs" id="zr">
+                <img src="assets/images/zr.jpg" alt="Završni rad">
+                <div class="project-mask" id="zr-mask"></div>
+                <div class="project-mask-text">Text</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page contact-me">
+        <i class="fas fa-chevron-left chevron"></i>
+        <div class="chevron-left-wrapper" id="fourth-chevron-left"></div>
+    </section>
+
+    <!-- custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
