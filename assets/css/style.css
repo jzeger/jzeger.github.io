@@ -3,7 +3,7 @@ html{
     margin: 0rem;
     padding: 0rem;
     overflow-x: hidden;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 body{
@@ -16,6 +16,10 @@ a{
     text-decoration: none;
 }
 
+button{
+    font-family: inherit;
+}
+
 .nav{
     position: fixed;
     top: 25px;
@@ -26,11 +30,14 @@ a{
     line-height: 100px;
     text-align: center;
     color: white;
-    animation: nav-fly-down 10s ease-out;
+    opacity: 0;
+    /*animation: nav-fly-down 10s ease-out;*/
+    animation: stuff-appears 3s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .negative-nav{
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 .nav-item{
@@ -46,7 +53,7 @@ a{
     width: 12px;
     height: 12px;
     margin-bottom: 15px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     background-clip: padding-box;
     /*border: 8px solid transparent;*/
     border-radius: 50%;
@@ -54,7 +61,7 @@ a{
 }
 
 .negative-circle{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 
 .circle:hover{
@@ -93,12 +100,107 @@ a{
     overflow: hidden;
 }
 
+/* Starter Question */
+/*#starter-question{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    transition: ease-in-out 1s;
+}
+
+.disappear{
+    opacity: 0;
+    z-index: -1 !important;
+}
+
+.question{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: translateY(-40%);
+    z-index: 11;
+    width: 100%;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    font-size: 3rem;
+}
+
+.answer{
+    position: absolute;
+    top: 55%;
+    left: 0;
+    transform: translateY(-55%);
+    z-index: 11;
+    width: 100%;
+    text-align: center;
+}
+
+.answer button{
+    display: inline-block;
+    width: 250px;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 20px 0px;
+    margin: 0px 50px;
+    transition: ease-in-out 0.7s;
+    opacity: 0;
+}
+
+.answer button:hover{
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    border-color:rgb(0, 0, 0);
+}
+
+#fun-off{
+    
+}
+
+#fun-on{
+    
+}*/
+
 /* First Section */
 .about-me{
     position: absolute;
     top: 0;
     left: 0;
-    background: black;
+    background: rgb(0, 0, 0);
+}
+
+.first-page-chevron{
+    /*opacity: 0;*/
+    animation: stuff-appears 3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.coming-soon{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-transform: capitalize;
+    animation: stuff-appears 3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.coming-soon div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+}
+
+.black-text{
+    color: black;
 }
 
 .welcome-message{
@@ -109,12 +211,20 @@ a{
     z-index: 3;
     width: 40vw;
     padding: 0px 150px;
-    font-size: 8rem;
+    font-size: 5rem;
     text-transform: uppercase;
     font-weight: 700;
-    background: black;
-    animation: text-fly-up 1s ease-out;
+    background: rgb(0, 0, 0);
+    opacity: 0;
+    /*animation: text-fly-up 1s ease-out;*/
+    animation: stuff-appears 3s ease-in-out;
+    animation-fill-mode: forwards;
 }
+
+/*.stuff-appears{
+    animation: stuff-appears 3s ease-in-out;
+    animation-fill-mode: forwards;
+}*/
 
 /* for glitch effect */
 /* 2 duplicates */
@@ -127,7 +237,7 @@ a{
     z-index: 3;
     width: 40vw;
     padding: 0px 150px;
-    font-size: 8rem;
+    font-size: 5rem;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -136,7 +246,7 @@ a{
 .welcome-message::before{
     left: 4px;
     text-shadow: -3px 0 rgb(151, 14, 133);
-    background: black;
+    background: rgb(0, 0, 0);
 
     clip: rect(44px, 450px, 56px, 0);
     animation: glitch-animation-1 3s infinite linear alternate-reverse;
@@ -146,7 +256,7 @@ a{
 .welcome-message::after{
     left: -4px;
     text-shadow: -3px 0 rgb(151, 14, 133);
-    background: black;
+    background: rgb(0, 0, 0);
 
     animation: glitch-animation-2 3s infinite linear alternate-reverse;
 }
@@ -161,7 +271,9 @@ a{
     padding: 0px 150px;
     font-size: 1.3rem;
     font-style: italic;
-    animation: text-fly-up 1s ease-out;
+    /*animation: text-fly-up 1s ease-out;*/
+    animation: stuff-appears 3s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 /* Second Section */
@@ -169,7 +281,7 @@ a{
     position: absolute;
     top: 0;
     left: 100vw;
-    background: white;
+    background: rgb(255, 255, 255);
 }
 
 .skills-graph{
@@ -188,7 +300,7 @@ a{
     position: absolute;
     top: -25px;
     left: -10px;
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -197,7 +309,7 @@ a{
     position: absolute;
     top: -25px;
     right: -20px;
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -206,7 +318,7 @@ a{
     position: relative;
     margin: 35px 0px;
     height: 100px;
-    background: black;
+    background: rgb(0, 0, 0);
     text-align: center;
     line-height: 100px;
     font-size: 1.4rem;
@@ -273,7 +385,7 @@ a{
     position: absolute;
     top: 0;
     left: 200vw;
-    background: black;
+    background: rgb(0, 0, 0);
 }
 
 .projects-wrapper{
@@ -284,7 +396,6 @@ a{
     padding: 0px 150px;
     width: 100vw;
     height: 40vh;
-    /*background: red;*/
     box-sizing: border-box;
     font-size: 0px;
 }
@@ -294,10 +405,26 @@ a{
     display: inline-block;
     width: 33.33%;
     height: 100%;
-    /*background: blue;*/
     font-size: 1rem;
     padding: 20px;
     box-sizing: border-box;
+}
+
+.project:hover .project-mask{
+    opacity: 1;
+}
+
+.project:hover .project-mask span{
+    top: 35%;
+    transform: translateY(-35%);
+    opacity: 1;
+}
+
+.project:hover .project-mask button{
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    opacity: 1;
 }
 
 .project img{
@@ -312,22 +439,63 @@ a{
     left: 0;
     z-index: 4;
     width: 100%;
-    height: 0%;
-    background: black;
-    opacity: 0.95;
-}
-
-.project-mask-text{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 4;
-    width: 100%;
     height: 100%;
     padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 2rem;
+    background: rgb(255, 255, 255);
+    background-clip: content-box;
+    opacity: 0;
+    transition: ease-out 0.5s;
 }
 
-.mask-animation{
+.project-mask span{
+    position: relative;
+    /*top: 35%;
+    transform: translateY(-35%);*/
+    top: 25%;
+    transform: translateY(-25%);
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+
+    color: rgb(0, 0, 0);
+    opacity: 0;
+    transition: ease-out 0.5s;
+}
+
+.project-mask button{
+    position: relative;
+    /*top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);*/
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px 20px;
+
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid rgb(0, 0, 0);
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+.project-mask button:hover{
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    /*border: 1px solid rgb(0, 0, 0);*/
+}
+
+/*.mask-animation{
     animation: project-mask-top-bottom 0.7s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
@@ -337,20 +505,20 @@ a{
     animation: project-mask-bottom-top 0.7s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
-}
+}*/
 
-.project-mask span{
+/*.project-mask span{
     position: absolute;
     top: 0;
     left: 0;
-}
+}*/
 
 /* Fourth Section */
 .contact-me{
     position: absolute;
     top: 0;
     left: 300vw;
-    background: white;
+    background: rgb(255, 255, 255);
 }
 
 .page .fa-chevron-right{
@@ -359,7 +527,7 @@ a{
     right: 50px;
     transform: translateY(-50%);
     z-index: 9;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 4rem;
 
     animation-name: chevronRight;
@@ -373,7 +541,7 @@ a{
     left: 50px;
     transform: translateY(-50%);
     z-index: 9;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 4rem;
 
     animation-name: chevronLeft;
@@ -382,7 +550,7 @@ a{
 }
 
 .negative-chevron{
-    color: black !important;
+    color: rgb(0, 0, 0) !important;
 }
 
 .chevron-right-wrapper{
@@ -579,7 +747,7 @@ a{
    }
 }
 
-@keyframes text-fly-up{
+/*@keyframes text-fly-up{
     0%{
         top: 125%;
     }
@@ -596,6 +764,16 @@ a{
 
     10%{
         top: 25px;
+    }
+}*/
+
+@keyframes stuff-appears{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
     }
 }
 
@@ -639,7 +817,7 @@ a{
     }
 }
 
-@keyframes project-mask-top-bottom{
+/*@keyframes project-mask-top-bottom{
     0%{
         height: 0%;
     }
@@ -657,4 +835,4 @@ a{
     100%{
         height: 0%;
     }
-}
+}*/

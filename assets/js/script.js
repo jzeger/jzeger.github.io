@@ -115,7 +115,7 @@ function defaultNavChevrons(){
 }
 
 // Project mask hover listeners
-document.getElementById("linars").addEventListener("mouseenter", function(){
+/*document.getElementById("linars").addEventListener("mouseenter", function(){
     document.getElementById("linars-mask").classList.add("mask-animation");
     document.getElementById("linars-mask").classList.remove("mask-leave-animation");
 });
@@ -140,4 +140,40 @@ document.getElementById("zr").addEventListener("mouseenter", function(){
 document.getElementById("zr").addEventListener("mouseleave", function(){
     document.getElementById("zr-mask").classList.remove("mask-animation");
     document.getElementById("zr-mask").classList.add("mask-leave-animation");
+});*/
+
+/*class Fun{
+    constructor(enabled){
+        this.fun = enabled;
+    }
+
+    get getFun(){
+        return this.fun;
+    }
+
+    set setFun(x){
+        this.fun = x;
+    }
+}
+
+fun = new Fun(true);
+
+function starterQuestionOff(){
+    document.getElementById("starter-question").classList.add("disappear");
+    document.getElementById("navigation").classList.add("stuff-appears");
+    document.getElementsByClassName("welcome-message")[0].classList.add("stuff-appears");
+    document.getElementsByClassName("my-description")[0].classList.add("stuff-appears");
+    document.getElementsByClassName("first-page-chevron")[0].classList.add("stuff-appears");
+}
+
+document.getElementById("fun-off").addEventListener("click", () => {
+    fun.setFun = false;
+    starterQuestionOff();
+    console.log(fun);
 });
+
+document.getElementById("fun-on").addEventListener("click", () => {
+    fun.setFun = true;
+    starterQuestionOff();
+    console.log(fun);
+});*/
